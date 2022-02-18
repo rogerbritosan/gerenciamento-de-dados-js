@@ -46,12 +46,13 @@ var password = document.querySelector("#exampleInputPassword1");
 var photo = document.querySelector("#exampleInputFile");
 var admin = document.querySelector("#");
 */
+
 /**
  * #8 selecionar campos gender
  * no console
  * utilizar querySelectorAll p/ selecionar os 2 campos gender
  * utilizar condição p/ selecionar a opção checada
- */
+*/
  document.querySelector('#form-user-create [name=gender]');
  document.querySelectorAll('#form-user-create [name=gender]');
  document.querySelectorAll('#form-user-create [name=gender]:checked');
@@ -66,12 +67,24 @@ var password = document.querySelector("#exampleInputPassword");
 var photo = document.querySelector("#exampleInputFile");
 var admin = document.querySelector("#exampleInputAdmin");
 
-// recuperar campos/valores do formulário de forma acadêmica
+// recuperar campos/valores do formulário de forma dinâmica
 
 fields = document.querySelectorAll('#form-user-create [name]');
 
 fields.forEach(function(field, index){
 
-    console.log(field, field.id, field.name, field.value, field.check, index);
+    // verifica se é gender
+    if (field.name == "gender"){
+
+        if (field.checked){
+            console.log('sim', field);
+        }
+
+        
+    } else {
+        console.log('não', field);
+    }
+
+    // console.log(field, field.id, field.name, field.value, field.check, index);
 
 });

@@ -31,7 +31,7 @@ console.log(el);
 console.log(el.value);
 
 /**
- * Todos os elementos do formulário
+ * #7 Todos os elementos do formulário
  */
 
 var name = document.querySelector("#exampleInputName");

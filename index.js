@@ -68,10 +68,10 @@ var admin = document.querySelector("#exampleInputAdmin");
 
 // recuperar campos/valores do formulário de forma acadêmica
 
-fields = document.querySelectorAll('#form-ser-create [name]');
+fields = document.querySelectorAll('#form-user-create [name]');
 
 fields.forEach(function(field, index){
 
-    console.push(field, field.id, field.name, field.value, field.check, index)
+    console.log(field, field.id, field.name, field.value, field.check, index);
 
 });

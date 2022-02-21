@@ -88,3 +88,59 @@ fields.forEach(function(field, index){
     // console.log(field, field.id, field.name, field.value, field.check, index);
 
 });
+
+/**
+ * #9 objetos
+ */
+
+// var fields = document.querySelectorAll('#form-user-create [name]');
+// var user = {};
+
+// fields.forEach(function(field, index){
+
+//     if (field.name == "gender"){
+
+//         if (field.checked){
+//             user[field.name] = field.value;
+//         }
+
+//     } else {
+//         user[field.name] = field.value;
+//     }
+
+// });
+
+// console.log(user);
+
+// document.querySelectorAll('button').forEach(function(btn){
+
+//     // esse this se referencia a cada botão durante o loop
+//     btn.addEventListener('click', function(){
+//         console.log(btn.textContent);
+//     });
+
+// });
+
+document.getElementById('form-user-create').addEventListener('submit', function(event){
+    event.preventDefault();
+    
+    var fields = document.querySelectorAll('#form-user-create [name]');
+    var user = {};
+
+    fields.forEach(function(field, index){
+
+        if (field.name == "gender"){
+
+            if (field.checked){
+                user[field.name] = field.value;
+            }
+
+        } else {
+            user[field.name] = field.value;
+        }
+
+    });
+
+    console.log(user);
+
+});
